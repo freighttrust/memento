@@ -39,12 +39,12 @@ db:
 eth:
   client:
     # HTTP endpoint of a web3-compatible node (mandatory)
-    http: "http://localhost:8545"
+    http: "http://18.144.13.28:8545/jsonrpc"
 
     # Websockets endpoint of JSON-RPC enabled node (optional)
     # if this is present, the task manager will use a newHeads subscription to watch for new blocks
     # if not present, the task manager will use polling to get the highest block
-    ws: "ws://localhost:8546"
+    ws: "ws://18.144.13.28:8546/jsonws"
 
     # The interval at which the task manager will poll the node for best block (default:"15s")
     # optional, only used if `ws` url is not specified
@@ -85,4 +85,3 @@ redis:
 
   # The name of the redis list the scraper will use for task management (default: "todo")
   list: "todo"
-
